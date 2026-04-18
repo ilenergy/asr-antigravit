@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASR Development Consulting Group | Premium</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    
+    <!-- Dynamic Animated Background -->
+    <div class="background-animation">
+        <canvas id="particles-canvas"></canvas>
+        <div class="ambient-glow"></div>
+        <div class="ambient-glow-2"></div>
+    </div>
+
+    <!-- Static High-End Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="ASR Group" class="brand-logo logo-glow" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <span class="logo-text" style="display:none;"><span class="logo-asr">ASR</span><span class="logo-group"> Group</span></span>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about" class="magnetic-btn cursor-stick">Haqqımızda</a></li>
+                    <li class="has-dropdown">
+                        <a href="#services" class="magnetic-btn cursor-stick">Xidmətlər <i class="fas fa-chevron-down text-sm"></i></a>
+                        <ul class="simple-dropdown">
+                            <li><a href="#" class="cursor-stick">Biznes Konsaltinq</a></li>
+                            <li><a href="#" class="cursor-stick">Hüquq və Vergi</a></li>
+                            <li><a href="#" class="cursor-stick">Rəqəmsallaşma</a></li>
+                            <li><a href="#" class="cursor-stick">HR Menecment</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#cases" class="magnetic-btn cursor-stick">Keyslər</a></li>
+                </ul>
+                <button class="primary-btn magnetic-btn open-modal cursor-stick" data-modal="diaqnostika">Pulsuz Diaqnostika</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Cinematic Carousel Section -->
+        <section class="hero cinematic-carousel" id="home">
+            <div class="carousel-slide active">
+                <div class="bg-img ken-burns" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"></div>
+                <div class="carousel-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title montserrat-title fade-text">Gələcəyi İndi Quraq</h1>
+                    <p class="hero-subtitle fade-subtitle">Premium standartlar, mükəmməl icra və strateji baxışla şirkətinizi zirvəyə daşıyın.</p>
+                    <div class="hero-actions">
+                        <button class="primary-btn magnetic-btn open-modal cursor-stick" data-modal="diaqnostika">Bizimlə Başla <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="bg-img ken-burns" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')"></div>
+                <div class="carousel-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title montserrat-title fade-text">İnnovativ Həllər İcra Edirik</h1>
+                    <p class="hero-subtitle fade-subtitle">Qlobal standartlar ilə işləyirik, rəqabətsiz böyüməni təmin edirik.</p>
+                    <div class="hero-actions">
+                        <a href="#services" class="primary-btn magnetic-btn cursor-stick">Xidmətlər <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-nav">
+                <button class="carousel-arrow prev cursor-stick"><i class="fas fa-chevron-left text-gold"></i></button>
+                <div class="progress-bar-container">
+                    <div class="progress-bar active"><div class="progress-fill"></div></div>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+                <button class="carousel-arrow next cursor-stick"><i class="fas fa-chevron-right text-gold"></i></button>
+            </div>
+            
+            <div class="floating-badge glass">
+                <div class="badge-icon"><i class="fas fa-star"></i></div>
+                <div class="badge-text">
+                    <span class="badge-number">10+ İL</span>
+                    <span class="badge-label">Təcrübə</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Slider -->
+        <section class="client-slider scroll-reveal">
+            <p class="slider-title">BİZƏ GÜVƏNƏN QLOBAL BRELƏR</p>
+            <div class="slider-track-container">
+                <div class="slider-track">
+                    <div class="client-logo glass">Premium Corp</div>
+                    <div class="client-logo glass">Global Tech</div>
+                    <div class="client-logo glass">NextGen Holdings</div>
+                    <div class="client-logo glass">Alpha Innovations</div>
+                    <div class="client-logo glass">Vertex Finance</div>
+                    <div class="client-logo glass">Pioneer Group</div>
+                    <div class="client-logo glass">Premium Corp</div>
+                    <div class="client-logo glass">Global Tech</div>
+                    <div class="client-logo glass">NextGen Holdings</div>
+                    <div class="client-logo glass">Alpha Innovations</div>
+                    <div class="client-logo glass">Vertex Finance</div>
+                    <div class="client-logo glass">Pioneer Group</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Magnet (Audit Check-list) -->
+        <section class="lead-magnet" id="magnet">
+            <div class="magnet-container glass tilt-card scroll-reveal">
+                <div class="magnet-text">
+                    <h2>Şirkətinizin <br><span class="text-gold">Audit Diaqnostikası</span></h2>
+                    <p class="mb-4">Biznesinizin tam vəziyyətini yoxlayın, riski azaldın, effektivliyi artırın.</p>
+                    <ul class="magnet-features">
+                        <li><div class="icon-circle"><i class="fas fa-check"></i></div> <span class="feature-text">Maliyyə səmərəliliyi və xərclər</span></li>
+                        <li><div class="icon-circle"><i class="fas fa-check"></i></div> <span class="feature-text">Əməliyyatların rəqəmsal auditi</span></li>
+                        <li><div class="icon-circle"><i class="fas fa-check"></i></div> <span class="feature-text">Risk və böyümə strategiyası</span></li>
+                    </ul>
+                    <button class="primary-btn magnetic-btn open-modal cursor-stick" data-modal="yukle"> <i class="fas fa-download"></i> İndi Yüklə </button>
+                </div>
+                <div class="magnet-visual">
+                    <div class="document-mockup glass">
+                        <div class="mockup-header"></div>
+                        <div class="mockup-body">
+                            <div class="l-line w-100"></div><div class="l-line w-80"></div><div class="l-line w-60"></div><br>
+                            <div class="l-line w-100"></div><div class="l-line w-90"></div><div class="l-line w-70"></div>
+                        </div>
+                        <div class="gold-badge">PULSUZ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services Section -->
+        <section class="services" id="services">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title">Eksklüziv <span class="text-gold">Xidmətlər</span></h2>
+                <p class="section-subtitle">Biznesinizin hər bir detalı üçün özəl olaraq dizayn edilmiş premium həllər.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass tilt-card scroll-reveal">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Strateji Konsaltinq</h3>
+                    <p>Böyümə potensialınızı kəşf edin, rəqabət üstünlüyü yaradın və yeni üfüqlərə doğru inamla addımlayın.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass tilt-card scroll-reveal" style="transition-delay: 0.1s">
+                    <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Risk Menecmenti</h3>
+                    <p>Mümkün təhlükələri öncədən analiz edin, biznesinizi sığortalayın və təməli möhkəm bir sistem qurun.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass tilt-card scroll-reveal" style="transition-delay: 0.2s">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Qlobal Genişlənmə</h3>
+                    <p>Yerli deyil, qlobal düşünün. Yeni beynəlxalq bazarlara çıxış və strategiyaların qüsursuz icrası.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass tilt-card scroll-reveal">
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Hüquq və Vergi</h3>
+                    <p>Təhlükəsiz böyümə üçün mükəmməl hüquqi və maliyyə strukturlarının peşəkar qurulması.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass tilt-card scroll-reveal" style="transition-delay: 0.1s">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Rəqəmsallaşma</h3>
+                    <p>Kağızlardan tamamilə qurtulun. Zəmanətli, müasir elektron hesabat sistemlərinin tətbiqi.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card glass tilt-card scroll-reveal" style="transition-delay: 0.2s">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3>HR Menecment</h3>
+                    <p>Şirkətinizi yüksəldəcək səriştəli komandaların yığılması və daimi inkişaf qiymətləndirilməsi.</p>
+                    <a href="#" class="card-link magnetic-btn cursor-stick">Daha Çox <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Counters -->
+        <section class="counters scroll-reveal">
+            <div class="counter-grid">
+                <div class="counter-item glass tilt-card">
+                    <div class="counter-number"><span class="count" data-target="50">0</span>+</div>
+                    <div class="counter-label text-gold">Peşəkar Ekspert</div>
+                </div>
+                <div class="counter-item glass tilt-card">
+                    <div class="counter-number"><span class="count" data-target="200">0</span>+</div>
+                    <div class="counter-label text-gold">Uğurlu Layihə</div>
+                </div>
+                <div class="counter-item glass tilt-card">
+                    <div class="counter-number"><span class="count" data-target="15">0</span>M$</div>
+                    <div class="counter-label text-gold">İdarə Olunan Büdcə</div>
+                </div>
+                <div class="counter-item glass tilt-card">
+                    <div class="counter-number"><span class="count" data-target="10">0</span>+</div>
+                    <div class="counter-label text-gold">İllik Təcrübə</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us / History -->
+        <section class="about-us scroll-reveal" id="about">
+            <div class="about-layout">
+                <div class="about-visual">
+                    <div class="about-image-wrapper glass tilt-card">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About ASR" class="about-img">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Haqqımızda & <span class="text-gold">Tarixçə</span></h2>
+                    <p class="about-text">ASR Development Consulting Group komandası hər zaman qüsursuzluğu hədəfləyir. Bizneslərin sadəcə qazanc əldə etməsini deyil, qlobal standartlara cavab verməsini təmin edirik.</p>
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-date text-gold">2016</div>
+                            <div class="timeline-info">
+                                <h4>Yaranış</h4>
+                                <p>Premium konsaltinq xidmətlərinin əsasının qoyulması.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date text-gold">2020</div>
+                            <div class="timeline-info">
+                                <h4>Genişlənmə</h4>
+                                <p>Qlobal bazarlara çıxış və beynəlxalq partnyorluqlar.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-date text-gold">2026</div>
+                            <div class="timeline-info">
+                                <h4>Liderlik</h4>
+                                <p>Bazarında rəqəmsallaşma və risk idarəçiliyi üzrə 1 nömrə.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies (Problem/Solution/Result) -->
+        <section class="case-studies scroll-reveal" id="cases">
+            <div class="section-header">
+                <h2 class="section-title">Uğurlu <span class="text-gold">Keyslər</span></h2>
+                <p class="section-subtitle">Real problemlər, tətbiq edilən strateji həllər və möhtəşəm nəticələr.</p>
+            </div>
+            <div class="cases-grid">
+                <div class="case-card glass tilt-card scroll-reveal">
+                    <div class="case-badge">Maliyyə Sektoru</div>
+                    <div class="case-content">
+                        <h3>Korporativ Yenidənqurma</h3>
+                        <div class="case-psr">
+                            <p><strong><i class="fas fa-exclamation-triangle text-gold"></i> Problem:</strong> Yüksək əməliyyat xərcləri və idarəetmə boşluqları.</p>
+                            <p><strong><i class="fas fa-lightbulb text-gold"></i> Həll:</strong> Avtomatlaşdırılmış hesabat sistemi və rəhbərliyin restrukturizasiyası.</p>
+                            <p><strong><i class="fas fa-chart-line text-gold"></i> Nəticə:</strong> Gəlirliliyin 35% artması və illik qənaət.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card glass tilt-card scroll-reveal" style="transition-delay: 0.1s">
+                    <div class="case-badge">İstehsalat</div>
+                    <div class="case-content">
+                        <h3>Təchizat Zənciri Optimizasiyası</h3>
+                        <div class="case-psr">
+                            <p><strong><i class="fas fa-exclamation-triangle text-gold"></i> Problem:</strong> Gecikmələr və keyfiyyətə nəzarətin yoxluğu.</p>
+                            <p><strong><i class="fas fa-lightbulb text-gold"></i> Həll:</strong> ISO standartlarının tətbiqi və yeni məntiqi zəncir modeli.</p>
+                            <p><strong><i class="fas fa-chart-line text-gold"></i> Nəticə:</strong> İstehsal həcminin tam 2 qat, sürətin 40% artması.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery scroll-reveal" id="gallery">
+            <div class="section-header text-center mx-auto" style="text-align: center; max-width:100%;">
+                <h2 class="section-title">Vizual <span class="text-gold">Səyahət</span></h2>
+                <p class="section-subtitle">Əməkdaşlıq, proseslər və komanda dinamikamız.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item glass tilt-card scroll-reveal"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery"></div>
+                <div class="gallery-item glass tilt-card scroll-reveal"><img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery"></div>
+                <div class="gallery-item glass tilt-card scroll-reveal"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery"></div>
+                <div class="gallery-item glass tilt-card scroll-reveal"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Gallery"></div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-section scroll-reveal" id="contact">
+            <div class="contact-container glass tilt-card">
+                <div class="contact-info-panel">
+                    <h2>Bizimlə <span class="text-gold">Əlaqə</span></h2>
+                    <p>Məqsədlərinizə birlikdə çataq. Komandamız sizinlə işləməyə hazırdır.</p>
+                    <div class="contact-details">
+                        <div class="c-item"><i class="fas fa-map-marker-alt text-gold"></i> <span>Nobel Prospekti 15, Bakı</span></div>
+                        <div class="c-item"><i class="fas fa-phone-alt text-gold"></i> <span>+994 50 000 00 00</span></div>
+                        <div class="c-item"><i class="fas fa-envelope text-gold"></i> <span>premium@asr-group.az</span></div>
+                    </div>
+                </div>
+                <div class="contact-form-panel">
+                    <form class="luxury-form">
+                        <div class="form-group"><input type="text" placeholder="Adınız və Soyadınız" required></div>
+                        <div class="form-group"><input type="email" placeholder="E-poçt ünvanınız" required></div>
+                        <div class="form-group"><textarea placeholder="Mesajınız..." rows="4" required></textarea></div>
+                        <button type="submit" class="primary-btn w-100 magnetic-btn cursor-stick">Mesajı Göndər <i class="fas fa-paper-plane" style="margin-left: 10px;"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4-Column Footer -->
+    <footer class="footer glass">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <img src="logo.png" alt="ASR Group" class="footer-logo mb-3" style="max-width: 150px; display: block;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo mb-3" style="display:none;"><span class="logo-asr">ASR</span><span class="logo-group"> Group</span></div>
+                <p class="text-muted" style="margin-top: 15px;">Premium standartlara sahib konsaltinq tərəfdaşınız. Gələcəyə birlikdə irəliləyək.</p>
+                <div class="social-links mt-3" style="margin-top: 20px;">
+                    <a href="#" class="magnetic-btn cursor-stick"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="magnetic-btn cursor-stick"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="magnetic-btn cursor-stick"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-col link-col">
+                <h4 class="text-gold">Sitemap</h4>
+                <ul>
+                    <li><a href="#home" class="magnetic-btn cursor-stick">Ana Səhifə</a></li>
+                    <li><a href="#services" class="magnetic-btn cursor-stick">Xidmətlər</a></li>
+                    <li><a href="#about" class="magnetic-btn cursor-stick">Haqqımızda</a></li>
+                    <li><a href="#cases" class="magnetic-btn cursor-stick">Keyslər</a></li>
+                    <li><a href="#gallery" class="magnetic-btn cursor-stick">Qalereya</a></li>
+                </ul>
+            </div>
+            <div class="footer-col form-col">
+                <h4 class="text-gold">Ekspertlər Hovuzu</h4>
+                <p class="text-muted mb-2" style="margin-bottom: 15px;">Komandamıza qoşulun, bacarıqlarınızı qlobal mühitdə dəyərləndirin.</p>
+                <button class="secondary-btn magnetic-btn open-modal cursor-stick" data-modal="expert">CV Göndər</button>
+            </div>
+            <div class="footer-col contact-col">
+                <h4 class="text-gold">Whatsapp İnteqrasiyası</h4>
+                <p class="text-muted" style="margin-bottom: 15px;">Canlı dəstək üçün WhatsApp üzərindən bizə yazın.</p>
+                <a href="https://wa.me/994500000000" target="_blank" class="whatsapp-btn magnetic-btn cursor-stick">
+                    <i class="fab fa-whatsapp"></i> +994 50 000 00 00
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="trust-badges">
+                <div class="badge-item"><i class="fas fa-certificate text-gold"></i> ISO 9001:2015</div>
+                <div class="badge-item"><i class="fas fa-shield-alt text-gold"></i> HACCP</div>
+                <div class="badge-item"><i class="fas fa-check-double text-gold"></i> AQTA Təsdiqli</div>
+            </div>
+            <p>&copy; 2026 ASR Development Consulting Group. Bütün hüquqlar qorunur.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-diaqnostika">
+        <div class="modal glass">
+            <button class="close-modal magnetic-btn cursor-stick"><i class="fas fa-times"></i></button>
+            <div class="modal-content-wrap">
+                <h2 class="text-gold">Pulsuz Diaqnostika</h2>
+                <form class="luxury-form">
+                    <div class="form-group"><input type="text" placeholder="Adınızı daxil edin" required></div>
+                    <div class="form-group"><input type="tel" placeholder="+994" required></div>
+                    <div class="form-group"><textarea placeholder="Daha ətraflı məlumat..." rows="3"></textarea></div>
+                    <button type="submit" class="primary-btn w-100 magnetic-btn cursor-stick">Müraciət Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal-overlay" id="modal-yukle">
+        <div class="modal glass">
+            <button class="close-modal magnetic-btn cursor-stick"><i class="fas fa-times"></i></button>
+            <div class="modal-content-wrap">
+                <h2 class="text-gold">Audit Check-listi</h2>
+                <form class="luxury-form">
+                    <div class="form-group"><input type="email" placeholder="Sizin e-poçtunuz" required></div>
+                    <button type="submit" class="primary-btn w-100 magnetic-btn cursor-stick">Faylı Qəbul Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-expert">
+        <div class="modal glass">
+            <button class="close-modal magnetic-btn cursor-stick"><i class="fas fa-times"></i></button>
+            <div class="modal-content-wrap">
+                <h2 class="text-gold">Ekspertlər Hovuzu</h2>
+                <p>CV-nizi yükləyin və karyeranıza bizimlə davam edin.</p>
+                <form class="luxury-form">
+                    <div class="form-group"><input type="text" placeholder="Adınız və Soyadınız" required></div>
+                    <div class="form-group"><input type="email" placeholder="E-poçt ünvanınız" required></div>
+                    <div class="form-group"><input type="file" accept=".pdf,.doc,.docx" required style="padding-top: 13px;"></div>
+                    <button type="submit" class="primary-btn w-100 magnetic-btn cursor-stick">Müraciəti Tamamla</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
