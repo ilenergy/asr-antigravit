@@ -191,7 +191,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('visible');
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // If it's the counters section, animate numbers
+                if (entry.target.classList.contains('counters')) {
+                    const counters = entry.target.querySelectorAll('.count');
+                    counters.forEach(counter => {
+                        const updateCount = () => {
+                            const target = +counter.getAttribute('data-target');
+                            const count = +counter.innerText;
+                            const speed = 100;
+                            const inc = target / speed;
+                            
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + inc);
+                                setTimeout(updateCount, 15);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        
+                        // only run once
+                        if (counter.innerText === '0') {
+                            updateCount();
+                        }
+                    });
+                }
+            }
         });
     }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
