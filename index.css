@@ -132,7 +132,7 @@ h4 {
 .primary-btn,
 .secondary-btn {
     border: none;
-    padding: 14px 28px;
+    padding: 8px 8px;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     font-size: 1rem;
@@ -217,7 +217,7 @@ h4 {
 }
 
 .logo .brand-logo {
-    max-height: 50px;
+    height: 80px;
     transition: filter 1s ease;
 }
 
@@ -254,7 +254,7 @@ h4 {
     color: var(--text-main);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.05rem;
+    font-size: 14px;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease;
     display: inline-flex;
