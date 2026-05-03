@@ -38,12 +38,14 @@ body {
     height: 20px;
     border-radius: 50%;
     background: var(--gold-gradient);
+    border: 1px solid rgba(0, 12,31,0.25);
     pointer-events: none;
     z-index: 9999;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
     transform: translate(-50%, -50%);
     transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, background 0.3s ease, border 0.3s ease;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.45),
+      0 0 6px rgba(0, 0, 0, 0.25);
 }
 
 .custom-cursor.hovering {
@@ -377,11 +379,13 @@ h4 {
 
 /* Logo ölçüsü və yerləşimi */
 .brand-logo {
-    height: 50px;
+    height: 70px;
     /* Ehtiyaca görə ölçünü dəyişə bilərsiniz */
     width: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition:transform 0.3s ease, filter 0.3s ease;
+    filter: brightness(1.35) contrast(1.25);
+    
 }
 .logo{
     margin-right: 40px;
@@ -582,7 +586,12 @@ section {
 /* Client Slider */
 .client-slider {
     padding: 40px 0;
-    background: rgba(0, 0, 0, 0.2);
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(212,175,55,0.08),
+        transparent
+    );
     overflow: hidden;
     white-space: nowrap;
 }
@@ -606,8 +615,10 @@ section {
     padding: 20px 40px;
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0 0 10px rgba(235, 183, 12, 0.4);
+
 }
 
 @keyframes slideLogos {
@@ -686,7 +697,7 @@ gold-badge-mini {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    background: rgba(255, 255, 255,0,02);
+    background: rgba(255, 255, 255,0.02);
     overflow: hidden;
     border: 1px solid var(--glass-border);
     transform-style: preserve-3d;
@@ -751,7 +762,7 @@ gold-badge-mini {
 }
 
 .document-mockup {
-    /* display: flex; */
+    display:block;
     /* flex-direction: column; */
     width: 340px;
     height: 460px;
@@ -760,7 +771,8 @@ gold-badge-mini {
     background: rgba(255, 255, 255, 0.03);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(212, 175, 55, 0.4);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5),0 0 20px rgba(212, 175, 55, o.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5),
+            0 0 20px rgba(212, 175, 55, 0.1);
     position: relative;
     transform-style: preserve-3d;
     overflow: hidden;
@@ -782,7 +794,7 @@ gold-badge-mini {
     height:8px;
     background:rgba(255, 255, 255, 0.1);
     margin-top: 20px;
-    color: #F4F6F9; Yazı rəngi ;
+   color: #F4F6F9;
     font-size: 13px;
     font-weight: 500;
     display: flex;
@@ -1298,7 +1310,7 @@ gold-badge-mini {
     opacity: 0.6;
     vertical-align: middle;
     margin-left: 6px;
-    transition: transform (0.8);
+    transition: transform 0.8s;
     display: inline-block;
 }
    .nav-links li:hover > a i {
@@ -1386,11 +1398,16 @@ gold-badge-mini {
 /* CERTIFICATES FINAL FIX */
 .certificates-grid {
     display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
     margin-top: 40px;
     padding: 0 20px;
+    align-items: stretch;
+}
+.certificates {
+    position: relative;
+    padding: 120px 8%;
+    background: #f6f8fc;
 }
 /* Mobil telefonlar üçün (Maksimum 576px) */
 @media (max-width: 576px){
@@ -1408,57 +1425,204 @@ gold-badge-mini {
 
 
 .certificate-card {
-    max-width: 320px;
-    margin: 0 auto;
-    display:grid;
+    /* max-width: 320px; */
+    /* margin: 0 auto; */
+    display: flex;
+    text-align: center;
     grid-template-columns: (4,1fr);
     /* flex-direction: column; */
-    justify-content: center;
-    /* overflow: hidden; */
+    justify-content:space-between;
+    overflow: hidden;
     /* text-align: center; */
-    gap: 20px;
-    margin-top: 40px;
-    padding: 0 20px;
+    /* gap: 20px; */
+    /* margin-top: 40px; */
+    /* padding: 0 20px; */
     border-radius: 16px;
-    transition: 0.3s ease;
+    transition:all 0.35s ease;
+    position: relative;
+    flex-direction: column;
     background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255, 255, 255 0.8);
+   border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .certificate-card img {
     width: 100%;
     /* max-width: 350px; */
-    height: 250px;
+    height: 220px;
     padding: 15px;
     background: #fff;
     /* display: block; */
     /* margin-bottom: 20px; */
     object-fit: contain;
-    object-position: center top;
+}
+.certificates-grid:hover .certificate-card {
+    filter:none;
+    opacity: 1;
+    transform: none;
 }
 
 .certificate-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(212,175,55,0.5);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transform: translateY(-8px) scale(1.03);
+    filter: none;
+    opacity: 1;
+    z-index: 10;
+    /* border-color: rgba(212,175,55,0.6); */
+    box-shadow: 0 25px 60px rgba(212,175,55,0.35);
+    border: 1px solid rgba(212,175,55,0.8);
+}
+.certificate-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(212,175,55,0.2),
+        transparent
+    );
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.certificate-card:hover::before {
+    opacity: 1;
 }
 /* ISO yazısı qızılı olsun */
 
 .cert-title {
     /* margin-top: auto; */
-    text-align: center;
+    /* text-align: center; */
+    font-weight: 700;
     /* width: 100%; */
     /* justify-content: center; */
     /* height: 20%; */
     /* display:inline-block; */
     /* align-items: center; */
     /* flex-shrink: 0; */
-    letter-spacing: 1px;
-    font-size: 20px;
-    padding:12px;
+    /* letter-spacing: 1px; */
+    font-size: 18px;
     margin: 0;
     color: #D4AF37;
-    padding: 12px;
-    font-weight: 800;
-    background: rgba(0,0,0,0.6);
+    padding: 15px;
+     background: rgba(255, 255, 255, 0.92);
+}
+.certificates .section-header p {
+    color: #2f4468 !important;
+    opacity: 1 !important;
+    font-weight: 500;
+}
+.certificates .section-header {
+    color: #fff !important;
+}
+
+.certificates .section-title {
+    -webkit-text-fill-color: unset !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 3px 10px rgba(0,0,0,0.5));
+}
+/* .certificates .section-title {
+    text-shadow: 0 4px 18px rgba(239, 234, 234, 0.893);
+    filter: drop-shadow(0 0 8px rgba(212,175,55,0.5));
+} */
+
+/* WHY US SECTION */
+.why-us {
+    position: relative;
+    padding: 120px 8%;
+    background: linear-gradient(
+        to bottom,
+        #0a2347 0%,
+    #dfe8f3 6%,
+    #f8fbff 14%,
+    #ffffff 75%,
+    #f4f7fb 100%
+    );
+    overflow: hidden;
+}
+
+.why-us .section-header {
+    text-align: center;
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 70px;
+    color: #5b6b86 ;
+}
+.why-us .section-title {
+    color: #0f2d5c;
+    text-shadow: none;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.why-card {
+    padding: 45px 30px;
+    border-radius: 20px;
+    text-align: center;
+    background: #ffffff;
+    border:1px solid rgba(0,0,0,0.06);
+    transition: all 0.35s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-12px);
+    border-color: rgba(212,175,55,0.5);
+    box-shadow: 0 20px 45px rgba(212,175,55,0.15);
+}
+
+.why-card .card-icon {
+    font-size: 2.7rem;
+    color: var(--premium-gold);
+    margin-bottom: 20px;
+}
+
+.why-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color:#0f2d5c;
+}
+
+.why-card p {
+    color: #5b6b86;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .document-mockup {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  * {
+    cursor: auto;
+  }
+  .custom-cursor {
+    display: none;
+  }
 }
